@@ -1,0 +1,27 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "A simple package for generating a project README",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobertTaylor94/README-Generator.git"
+  },
+  "keywords": [
+    "readme",
+    "generator",
+    "package"
+  ],
+  "author": "R J Taylor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobertTaylor94/README-Generator/issues"
+  },
+  "homepage": "https://github.com/RobertTaylor94/README-Generator#readme",
+  "dependencies": {
+    "inquirer": "^6.5.2"
+  }
+}
