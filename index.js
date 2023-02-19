@@ -5,7 +5,37 @@ const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
 const questions = [
-
+    {
+        type: "input",
+        message: "Title:",
+        name: "title"
+    },
+    {
+        type: "input",
+        message: "Description:",
+        name: "description"
+    },
+    {
+        type: "input",
+        message: "Installation instructions:",
+        name: "install"
+    },
+    {
+        type: "list",
+        message: "License:",
+        name: "license",
+        choices: ["MIT", "Apache 2.0", "GNU General Public License", "Mozilla Public License"]
+    },
+    {
+        type: "input",
+        message: "What is your GitHub link?",
+        name: "github"
+    },
+    {
+        type: "input",
+        message: "What is your email address for contact?",
+        name: "email"
+    }
 ];
 
 inquirer
