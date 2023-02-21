@@ -65,16 +65,17 @@ function writeToFile(fileName, data) {
 // function to initialize program
 function init() {
     inquirer
+    //uses inqurier package to take user prompts for building the readme using an array of questions
     .prompt(questions).then(response => {
-        console.log(response);
+        //generates a new file using prewritten markdown and saves the files to the root folder
         let newFile = generateMarkdown(response);
         writeToFile(response.title, newFile);
     })
 }
 
 function validateEmail(email) {
+    //using the email-validator package, if email is valid move on to the next prompt
     if (emailValidator.validate(email)) {
-        console.log("Email verified");
         return true;
     } else {
         console.log("Invalid email");
