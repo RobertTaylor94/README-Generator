@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require('path');
 const inquirer = require("inquirer");
+const emailValidator = require('email-validator');
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
@@ -49,16 +50,10 @@ const questions = [
     {
         type: "input",
         message: "What is your contact email address?",
-        name: "email"
+        name: "email",
+        validate: validateEmail
     }
 ];
-
-inquirer
-    .prompt(questions).then(response => {
-        console.log(response);
-        let newFile = generateMarkdown(response);
-        writeToFile(response.title, newFile);
-    })
 
 // function to write README file
 function writeToFile(fileName, data) {
@@ -69,7 +64,22 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 function init() {
-
+    inquirer
+    .prompt(questions).then(response => {
+        console.log(response);
+        let newFile = generateMarkdown(response);
+        writeToFile(response.title, newFile);
+    })
 }
+
+function validateEmail(email) {
+    if (emailValidator.validate(email)) {
+        console.log("Email verified");
+        return true;
+    } else {
+        console.log("Invalid email");
+    };
+}
+
 // function call to initialize program
 init();
