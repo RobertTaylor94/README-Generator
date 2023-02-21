@@ -10,6 +10,7 @@
 
 * [Installation](#installation)
 * [Usage](#usage)
+* [Gallery](#gallery)
 * [License](#license)
 * [Contributing](#contributing-here-is-a-header)
 * [Tests](#tests)
@@ -22,6 +23,14 @@ To install the necessary dependencies run `npm install`. Requires Inquirer and e
 ## Usage
 
 Run `node index.js`
+
+## Gallery
+
+https://user-images.githubusercontent.com/52116466/220468411-c54cced4-0523-4e4d-b4fb-cd044b7a6795.mov
+
+<br>
+
+<img width="500w" alt="Screenshot 2023-02-21 at 21 52 14" src="https://user-images.githubusercontent.com/52116466/220468509-e1f6af49-fc92-4dc7-9afc-c381bd5ca53a.png">
 
 ## License
 
